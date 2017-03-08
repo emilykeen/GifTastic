@@ -1,4 +1,4 @@
-var animalList = ["cat", "dog", "hamster", "fish"];
+var animalList = ["cat", "dog", "hamster", "fish", "mouse", "snake", "gerbil", "turtle", "bird","ferret"];
 
 
 function displayAnimal() {

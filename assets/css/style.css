@@ -1,20 +1,19 @@
-body{
-
-	background:lightblue;
-  font: 'Berkshire Swash', Helvetica, sans-serif;
-  color: #2b2b2b;
-  text-shadow: 1px 1px 0px #ededed, 4px 4px 0px rgba(0,0,0,0.15);
-
+body {
+    background: lightblue;
+    font: 'Berkshire Swash', Helvetica, sans-serif;
+    color: #2b2b2b;
+    text-shadow: 1px 1px 0px #ededed, 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
-#animal-form{
 
-	position:absolute;
-	left:70%;
+#animal-form {
+    position: absolute;
+    left: 70%;
 }
-.header{
-	background: pink;
-	text-align: center;
-	  font: 400 100px/1.2 'Merienda One', Helvetica, sans-serif;
-  color: rgba(0,0,0,0.7);
-  text-shadow: 3px 3px 3px #fff;
+
+.header {
+    background: pink;
+    text-align: center;
+    font: 400 100px/1.2 'Merienda One', Helvetica, sans-serif;
+    color: rgba(0, 0, 0, 0.7);
+    text-shadow: 3px 3px 3px #fff;
 }
