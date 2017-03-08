@@ -5,7 +5,7 @@ function displayAnimal() {
     var animal = $(this).attr("data-name");
     var queryurl = "http://api.giphy.com/v1/gifs/search?q=" +
         animal + "&api_key=dc6zaTOxFJmzC&limit=10";
-	$("#gifs_here").empty();
+    $("#gifs_here").empty();
 
     $.ajax({
 
@@ -17,13 +17,13 @@ function displayAnimal() {
             var results = response.data;
             for (var i = 0; i < results.length; i++) {
                 var gifDiv = $("<div class='pic'>");
-
                 var rating = results[i].rating;
-
                 var p = $("<p>").text("Rating: " + rating);
                 var animalImage = $("<img>");
+                animalImage.attr('data-index', i);
                 animalImage.attr("src", results[i].images.fixed_height.url);
-
+                animalImage.attr("data-state", "moving");
+                console.log(animalImage);
                 gifDiv.prepend(p);
                 gifDiv.prepend(animalImage);
 
@@ -31,11 +31,19 @@ function displayAnimal() {
 
 
                 $(animalImage).on("click", function() {
+                        state = $(this).attr("data-state")
 
-                        for (var a = 0; a < results.length; a++) {
-                            $(this).attr("src", results[a].images.fixed_height_still.url);
 
+                        if (state === "moving") {
+                            var dataIndex = $(this).attr('data-index');
+                            $(this).attr("src", results[dataIndex].images.fixed_height_still.url);
+                            $(this).attr("data-state", "still");
+                        } else {
+                            var dataIndex = $(this).attr('data-index');
+                            $(this).attr("src", results[dataIndex].images.fixed_height.url);
+                            $(this).attr("data-state", "moving");
                         }
+
                     }
 
 
