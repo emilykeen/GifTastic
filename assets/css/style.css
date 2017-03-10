@@ -17,3 +17,16 @@ body {
     color: rgba(0, 0, 0, 0.7);
     text-shadow: 3px 3px 3px #fff;
 }
+
+.pic {
+    float: left;
+}
+
+img {
+    height: 200px;
+    width: 200px;
+}
+
+#gifs_here {
+    width: 70%;
+}
